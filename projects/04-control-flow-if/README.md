@@ -23,3 +23,35 @@ ng serve 04-control-flow-if
 1. Confirm that your changes are correctly updated in the browser
 
 (BONUS) there may be a better way to write this conditionally? Which control flow command would you use for this?
+
+
+```Angular
+
+  <!-- switch case-->
+<p>
+   @switch (account.membershipStatus) {
+    @case ('platinum') {
+      <span class="badge platinum">Platinum</span>
+    }
+    @case ('gold') {
+      <span class="badge gold">Gold</span>
+    }
+    @default {
+      <span class="badge silver">Silver</span>
+    }
+   }
+</p>
+```
+
+```Angular
+  <!-- if case-->
+<p>
+   @if (account.membershipStatus === 'gold') {
+    <span class="badge gold">Gold</span>
+   } @else if (account.membershipStatus === 'platinum') {
+    <span class="badge platinum">Platinum</span>
+   } @else {
+    <span class="badge silver">Silver</span> 
+   }
+</p>
+```
